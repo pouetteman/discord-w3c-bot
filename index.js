@@ -50,7 +50,7 @@ const server = http.createServer(function (req, res) {
     res.end(response);
 });
 
-server.listen();
+server.listen(process.env.PORT || 8888)
 
 
 // ########################################################### EVENTS //
