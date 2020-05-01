@@ -41,6 +41,15 @@ const commandList = [
   leagueCommand,
   statsCommand
 ];
+const server = http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    const message = 'It works!\n',
+        response = [message].join('\n');
+    res.end(response);
+});
+
+server.listen();
+
 
 // ########################################################### EVENTS //
 client.on("ready", () => {
